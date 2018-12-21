@@ -19,6 +19,7 @@ const Category = () => import('@/view/category/category')
 const ArticleList = () => import('@/view/articleList/articleList')
 const ArticleCreate = () => import('@/view/articleCreate/articleCreate')
 const ArticleEdit = () => import('@/view/articleEdit/articleEdit')
+const Friend = () => import('@/view/FriendLink/FriendLink')
 
 Vue.use(Router)
 
@@ -50,6 +51,17 @@ export const constantRouter = [
         path: 'index',
         name: '分类管理',
         component: Category
+      }
+    ]
+  },
+  {
+    path: '/friend',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: '友情链接',
+        component: Friend
       }
     ]
   },
